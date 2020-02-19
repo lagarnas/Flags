@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlagsConstrains" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-YE-eqf" userLabel="Image 1">
+                                <rect key="frame" x="87" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fhA-YE-eqf" secondAttribute="height" multiplier="15:8" id="aSH-DD-zqD"/>
+                                    <constraint firstAttribute="height" constant="128" id="fKi-ea-wcA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="E9r-l2-Qzx" userLabel="Image 2">
+                                <rect key="frame" x="87" y="212" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E9r-l2-Qzx" secondAttribute="height" multiplier="15:8" id="SOZ-lm-vz5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-Ji-0Vr" userLabel="Image 3">
+                                <rect key="frame" x="87" y="360" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vUo-Ji-0Vr" secondAttribute="height" multiplier="15:8" id="HxJ-yf-aHj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84894486011001113" green="0.84894486011001113" blue="0.84894486011001113" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fhA-YE-eqf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="20g-ex-CEi"/>
+                            <constraint firstItem="E9r-l2-Qzx" firstAttribute="height" secondItem="fhA-YE-eqf" secondAttribute="height" id="3U2-rr-LNk"/>
+                            <constraint firstItem="vUo-Ji-0Vr" firstAttribute="top" secondItem="E9r-l2-Qzx" secondAttribute="bottom" constant="20" id="GmI-CI-HSN"/>
+                            <constraint firstItem="fhA-YE-eqf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JIA-x6-JSw"/>
+                            <constraint firstItem="vUo-Ji-0Vr" firstAttribute="height" secondItem="E9r-l2-Qzx" secondAttribute="height" id="KA3-4X-44i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vUo-Ji-0Vr" secondAttribute="bottom" constant="20" id="LMA-9W-kBw"/>
+                            <constraint firstItem="vUo-Ji-0Vr" firstAttribute="centerX" secondItem="E9r-l2-Qzx" secondAttribute="centerX" id="M3M-hJ-BSz"/>
+                            <constraint firstItem="E9r-l2-Qzx" firstAttribute="centerX" secondItem="fhA-YE-eqf" secondAttribute="centerX" id="aeg-pT-SOI"/>
+                            <constraint firstItem="E9r-l2-Qzx" firstAttribute="top" secondItem="fhA-YE-eqf" secondAttribute="bottom" constant="20" id="eeP-wa-NVn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1000" height="500"/>
+        <image name="2" width="1000" height="500"/>
+        <image name="3" width="1000" height="500"/>
+    </resources>
 </document>
